@@ -1,0 +1,7 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+The secret recipe vault should configured behind a CloudFront or at least have an Access control list (ACL) to control who's able to access this bucket instead of direct access from outside.
+
+# Poor practice 2
+WebAppSG should not open port 5000 since the whole application only accessed via public access (port 80) or via SSH (port 22)

@@ -1,0 +1,21 @@
+Listed only Critical and High issues:
+
+- For WebAppSG
+    - Security groups should not allow unrestricted access to ports with high risk (port 5000)
+    - Security groups should not allow ingress from 0.0.0.0/0 or ::/0 to port 22 and 3389
+    - Security groups should only allow unrestricted incoming traffic for authorized ports
+
+- For AttackInstanceSG
+    - Security groups should not allow unrestricted access to ports with high risk (port 5000)
+    - Security groups should not allow ingress from 0.0.0.0/0 or ::/0 to port 22 and 3389
+    - Security groups should only allow unrestricted incoming traffic for authorized ports
+
+- For instance Web Service Instance - C3
+    - EC2 instances should not have a public IPv4 address
+    - EC2 instances should use Instance Metadata Service Version 2 (IMDSv2)
+
+- For instance Attack Instance - C3
+    - EC2 instances should not have a public IPv4 address
+    - EC2 instances should use Instance Metadata Service Version 2 (IMDSv2)
+
+We can follow the best practice at https://docs.aws.amazon.com/securityhub/latest/userguide/ec2-controls.html to resolve the security issues

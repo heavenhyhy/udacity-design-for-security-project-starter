@@ -1,0 +1,27 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+
+Veracode
+
+### Example vulnerability
+
+Was used in my company to scan the IaC file to expose any non-compliant code and/or deprecated resource.
+
+##Scan AMI’s or containers for OS vulnerabilities
+
+Amazon Inspector
+
+### Example vulnerability
+
+- Package vulnerability findings identify software packages in your AWS environment that are exposed to Common Vulnerabilities and Exposures (CVEs)
+- Code vulnerability findings identify lines in your code that attackers could exploit. Code vulnerabilities include injection flaws, data leaks, weak cryptography, or missing encryption in your code.
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+
+AWS Security Hub
+
+### Example vulnerability
+
+- Security groups vulnerability
+- EC2 instances vulnerability

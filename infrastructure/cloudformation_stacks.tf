@@ -2,14 +2,14 @@
 
 resource "aws_cloudformation_stack" "s3" {
   name = "c3-s3"
-  template_body = file("../cloudformation/c3-s3.yaml")
+  template_body = file("./cloudformation/c3-s3.yml")
 }
 
 resource "aws_cloudformation_stack" "vpc" {
   depends_on = [aws_cloudformation_stack.s3]
 
   name = "c3-vpc"
-  template_body = file("../cloudformation/c3-vpc.yaml")
+  template_body = file("./cloudformation/c3-vpc.yml")
 }
 
 resource "aws_key_pair" "ssh" {
@@ -23,8 +23,7 @@ resource "aws_cloudformation_stack" "app" {
   name = "c3-app"
   capabilities = ["CAPABILITY_IAM"]
   parameters = {
-    ParameterKey = "KeyPair"
-    ParameterValue = aws_key_pair.ssh.key_name
+    KeyPair = aws_key_pair.ssh.key_name
   }
-  template_body = file("../cloudformation/c3-app.yaml")
+  template_body = file("./cloudformation/c3-app.yml")
 }
