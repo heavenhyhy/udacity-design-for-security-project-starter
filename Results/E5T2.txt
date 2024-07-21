@@ -1,5 +1,9 @@
 # Identify tools that will allow you to do the following:
 
+## Scan application code
+
+Veracode
+
 ## Scan infrastructure as code templates
 
 Veracode
